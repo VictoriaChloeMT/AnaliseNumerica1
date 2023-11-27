@@ -1,4 +1,5 @@
 function H = gerarMatrizHilbert(n)
+    format long
     H = zeros(n, n);
     for i = 1:n
         for j = 1:n
@@ -6,3 +7,4 @@ function H = gerarMatrizHilbert(n)
         end
     end
 end
+

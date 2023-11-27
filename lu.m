@@ -1,7 +1,7 @@
 function [L, U] = lu(A)
     n = size(A, 1);
     L = eye(n);
-    U = zeros(n);
+    U = eye(n);
 
     for k = 1:n
         U(k, k:n) = A(k, k:n) - L(k, 1:k-1) * U(1:k-1, k:n);
