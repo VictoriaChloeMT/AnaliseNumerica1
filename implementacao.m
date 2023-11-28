@@ -63,7 +63,7 @@ for i = 1:length(omega_1)
     radios_espectrais_JOR(i) = spec_rad(Bjo);
 end
 
-figure; % Primeira figura
+figure; 
 plot(omega_1, radios_espectrais_JOR, 'LineWidth', 2);
 xlabel('Omega');
 ylabel('Raio Espectral');
@@ -78,7 +78,7 @@ for i = 1:length(omega_2)
     radios_espectrais_SOR(i) = spec_rad(Bsor_func);
 end
 
-figure; % Segunda figura
+figure;
 plot(omega_2, radios_espectrais_SOR, 'LineWidth', 2);
 xlabel('Omega');
 ylabel('Raio Espectral');
