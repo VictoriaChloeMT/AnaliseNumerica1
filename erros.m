@@ -1,4 +1,4 @@
-clear; n = 11; H = gerarMatrizHilbert(n); b=ones(n,1);
+clear; n = 100; H = gerarMatrizHilbert(n); b=ones(n,1);
 
 x0 = zeros(n,1); omega1 = 0.01; omega2 = 0.02; tolerance = 1e-7; max_iterations = 10;
 X = linsolve(H, b);
@@ -31,7 +31,7 @@ Ea_LU = abs(X - x1); Ea_Cholesky = abs(X - x2); Ea_JOR = abs(X - x3); Ea_SOR = a
 
 Er_LU = abs(Ea_LU ./ abs(X)); Er_Cholesky = abs(Ea_Cholesky ./ abs(X)); Er_JOR = abs(Ea_JOR ./ abs(X)); Er_SOR = abs(Ea_SOR ./ abs(X)); Er_MaxDescida = abs(Ea_MaxDescida ./ abs(X)); Er_GradConj = abs(Ea_GradConj ./ abs(X));
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%Erros relativos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % LU
 figure;
@@ -74,7 +74,9 @@ plot(Er_GradConj);
 title('Gradientes Conjugados');
 xlabel('n');
 ylabel('Erro');
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%Erros absolutos%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % LU
 figure;
 plot(Ea_LU);
