@@ -1,5 +1,5 @@
 function [x, iter] = sor(A, b, x0, omega, TOL, max_iter)
-    n = length(b);  % Get the size of the system from the length of the vector b
+    n = length(b);
     x = x0;
 
     for iter = 1:max_iter
